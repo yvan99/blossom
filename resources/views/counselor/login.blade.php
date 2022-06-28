@@ -2,7 +2,7 @@
 
 <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="px-8 py-6 mt-4 text-left bg-white shadow-md rounded">
-        <h3 class="text-2xl font-bold text-center">Admin Portal</h3>
+        <h3 class="text-2xl font-bold text-center">Councellor Portal</h3>
         <form action="" method="POST" autocomplete="off">
             <div class="mt-4">
                 <div>
