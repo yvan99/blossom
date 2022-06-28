@@ -51,16 +51,16 @@
         <div class="sm:gap-4 sm:flex">
           <a
             class="block px-5 py-2.5 text-sm font-medium text-white bg-rose-600 hover:bg-gray-500 transition rounded-md shadow"
-            href="/"
+            href="/admin"
           >
-            Login
+            ADMIN
           </a>
 
           <a
             class="hidden sm:block px-5 py-2.5 text-sm font-medium text-white bg-gray-800 rounded-md hover:text-white/75 transition"
-            href="/signup"
+            href="/counsellor"
           >
-            Register
+            COUNSELLOR
           </a>
         </div>
 
