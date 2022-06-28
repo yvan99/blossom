@@ -5,10 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Questions;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class QuestionsController extends Controller
 {
+    public function getRandomQuestions(){
+        $getRandom = DB::select("SELECT * FROM questions ORDER BY rand() LIMIT 10");
+        $getQuestions= DB::select("SELECT * FROM answers");
+        return view('quiz',['randomize'=>$getRandom,'answers'=>$getQuestions]);
+    }
     public function CreateQuestion(Request $request){
         $rules = [
             'question' => 'required',
