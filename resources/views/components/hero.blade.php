@@ -26,7 +26,7 @@
                 </a>
 
                 <a class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-rose-600 sm:w-auto hover:text-rose-700 active:text-rose-500 focus:outline-none focus:ring"
-                    href="/login">
+                    href="/quiz">
                     Take Quiz
                 </a>
             </div>

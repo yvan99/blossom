@@ -15,6 +15,18 @@
             </a>
           </li>
 
+          <li>
+            <a class="text-white transition hover:text-white/75" href="/quiz">
+              Take a quiz
+            </a>
+          </li>
+
+          <li>
+            <a class="text-white transition hover:text-white/75" href="/signup">
+              Sign up
+            </a>
+          </li>
+
           {{-- <li>
             <a class="text-white transition hover:text-white/75" href="/">
               Careers
@@ -53,14 +65,14 @@
             class="block px-5 py-2.5 text-sm font-medium text-white bg-rose-600 hover:bg-gray-500 transition rounded-md shadow"
             href="/admin"
           >
-            ADMIN
+            Admin
           </a>
 
           <a
             class="hidden sm:block px-5 py-2.5 text-sm font-medium text-white bg-gray-800 rounded-md hover:text-white/75 transition"
             href="/counsellor"
           >
-            COUNSELLOR
+            Counsellor
           </a>
         </div>
 
