@@ -37,13 +37,14 @@
           </button>
         </div>
         <div class="modal-body">
-            <form role="form">
+            <form method="POST" action="{{ route('savecounsellor') }}">
+              @csrf
                 <div class="form-group mb-3">
                     <div class="input-group input-group-merge input-group-alternative">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="ni circle-08"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Fullnames" type="text">
+                        <input class="form-control" placeholder="Fullnames" name="fullname" type="text">
                     </div>
                 </div>
                 <div class="form-group mb-3">
@@ -51,7 +52,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input class="form-control" placeholder="Email" type="email">
+                        <input class="form-control" placeholder="Email" name="email" type="email">
                     </div>
                 </div>
                 <div class="form-group">
@@ -59,14 +60,15 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                         </div>
-                        <input class="form-control" placeholder="phone" type="text">
+                        <input class="form-control" placeholder="phone" name="telephone" type="text">
                     </div>
                 </div>
-            </form>
+            
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </form>
         </div>
       </div>
     </div>
@@ -79,6 +81,7 @@
 </div>
 
 <div class="container-fluid mt--6">
+  @include('components.alert')
 <div class="row">
     <div class="col">
         <div class="card">

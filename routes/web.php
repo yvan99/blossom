@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CouncellorController;
 use App\Http\Controllers\QuestionsController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
@@ -12,6 +13,7 @@ Route::get('/quiz',[QuestionsController::class,'getRandomQuestions']);
 // ADMINISTRATOR ROUTES
 Route::view('/admin','admin.login');
 Route::view('/admin/home','admin.index');
+Route::post('/admin/counselor',[CouncellorController::class,'CreateCouncellor'])->name('savecounsellor');
 Route::view('/admin/student','admin.student');
 Route::view('/admin/counselor','admin.counselor');
 Route::view('/admin/question','admin.question');

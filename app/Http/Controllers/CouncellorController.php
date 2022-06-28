@@ -8,19 +8,17 @@ use Illuminate\Support\Facades\Validator;
 class CouncellorController extends Controller
 {
     public function CreateCouncellor(Request $request){
+       
         $rules = [
             'fullname' => 'required',
             'email' => 'required',
-            'password' => 'required',
             'telephone' => 'required',
         ];
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
-            return redirect()->back()->withInput($request->only('fullname','email','password','telephone'))->withErrors($validator);
+            return redirect()->back()->withInput($request->only('fullname','email','telephone'))->withErrors($validator);
         } else {
-
             $councellorData = $request->input();
-
             try {
                 $councelor = new Councelor();
                 $councelor-> couns_fullnames = $councellorData['fullname'];
