@@ -6,7 +6,6 @@
         <div class="bg-white px-6 py-8 rounded text-black w-full">
             <h1 class="mb-8 font-extrabold sm:text-5xl text-center">Let's Take the Quiz</h1>
             @include('components.alert')
-
             @foreach ($randomize as $item)
                 <li style="list-style-type: decimal;font-size:23px;text-transform:capitalize" class="pb-4 pt-4"> {{ $item->quest_question }}</li>
                 @foreach ($answers as $ans)
