@@ -10,5 +10,9 @@ Route::post('/signup',[StudentController::class,'CreateStudent'])->name('savestu
 
 // ADMINISTRATOR ROUTES
 Route::view('/admin','admin.login');
+Route::view('/admin/home','admin.index');
+Route::view('/admin/student','admin.student');
+Route::view('/admin/counselor','admin.counselor');
+Route::view('/admin/question','admin.question');
 // COUNCELLOR ROUTES
 Route::view('/counsellor','counselor.login');
