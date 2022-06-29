@@ -1,5 +1,6 @@
 @include('components.css')
 @include('components.header')
+<script src="//code.tidio.co/cma6pvx2dwu34s1ztlr25xxllksz6oqs.js" async></script>
 <div class="bg-grey-lighter min-h-screen flex flex-col">
     <div class="container w-1/2 mx-auto flex-1 flex flex-col items-center justify-center px-2">
 
