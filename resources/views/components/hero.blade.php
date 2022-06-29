@@ -1,6 +1,6 @@
 <section class="relative bg-white">
     <img class="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
-        src="https://st4.depositphotos.com/1173469/40852/i/450/depositphotos_408527476-stock-photo-silhouettes-beautiful-young-women-sunset.jpg"
+        src="assets/img/banner.jpg"
         alt="sisterhood" />
 
     <div class="hidden sm:block sm:inset-0 sm:absolute sm:bg-gradient-to-r sm:from-white sm:to-transparent"></div>

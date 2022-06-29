@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Councelor;
+use App\Models\Questions;
 use App\Models\Student;
 use Exception;
 use Illuminate\Http\Request;
@@ -44,5 +46,25 @@ class StudentController extends Controller
                 return redirect()->back()->with('status', "operation failed");
             }
     }
+}
+
+public function populateData(){
+    $getStudents = Student::all();
+    $getCouncelors= Councelor::all();
+    $getQuestions = Questions::all();
+
+    $getStudentstotal = Student::all()->count();
+    $getCouncelortotals= Councelor::all()->count();
+    $getQuestionstotal = Questions::all()->count();
+
+    return [
+
+        'questions'=>$getQuestions,
+        'counselorse'=>$getCouncelors,
+        'students'=>$getStudents,
+        'totalstudents'=>$getStudentstotal,
+        'totalcounsel'=>$getCouncelortotals,
+        'totalquestion'=>$getQuestionstotal
+    ];
 }
 }

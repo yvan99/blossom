@@ -2,14 +2,14 @@
 
 <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="px-8 py-6 mt-4 text-left bg-white shadow-md rounded">
-        <h3 class="text-2xl font-bold text-center">Admin Portal</h3>
-        <form action="{{route('adminlogin')}}" method="POST" autocomplete="off">
+        <h3 class="text-2xl font-bold text-center">Student Portal</h3>
+        <form action="{{route('studentlogin')}}" method="POST" autocomplete="off">
             @include('components.alert')
             @csrf
             <div class="mt-4">
                 <div>
-                    <label class="block" for="email">Email<label>
-                            <input type="text" placeholder="Email" name="email"
+                    <label class="block" for="email">Your username<label>
+                            <input type="text" placeholder="username" name="username"
                                 class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <div class="mt-4">

@@ -24,11 +24,10 @@
     </span>
 
     <p>
-      <strong class="text-sm font-medium"> Info! </strong>
-
-      <span class="block text-xs opacity-90">
+    
+      <h3 class="block text-xs opacity-90">
         {{ session('status') }}
-      </span>
+      </h3>
     </p>
   </div>
 
