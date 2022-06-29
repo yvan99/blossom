@@ -27,6 +27,12 @@
             </a>
           </li>
 
+          <li>
+            <a class="text-white transition hover:text-white/75" href="/signin">
+              Sign In
+            </a>
+          </li>
+
           {{-- <li>
             <a class="text-white transition hover:text-white/75" href="/">
               Careers
@@ -60,7 +66,18 @@
       </nav>
 
       <div class="flex items-center gap-4">
+
+
         <div class="sm:gap-4 sm:flex">
+
+          @if (Auth::user())
+          <a
+          class="block px-5 py-2.5 text-sm font-medium text-white bg-rose-600 hover:bg-gray-500 transition rounded-md shadow"
+          href="#"
+        >
+          {{Auth::user()->student_username}}
+        </a>
+          @endif
           <a
             class="block px-5 py-2.5 text-sm font-medium text-white bg-rose-600 hover:bg-gray-500 transition rounded-md shadow"
             href="/admin"
