@@ -3,7 +3,7 @@
 <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="px-8 py-6 mt-4 text-left bg-white shadow-md rounded">
         <h3 class="text-2xl font-bold text-center">Student Portal</h3>
-        <form action="{{route('studentlogin')}}" method="POST" autocomplete="off">
+        <form action="{{route('logstud')}}" method="POST" autocomplete="off">
             @include('components.alert')
             @csrf
             <div class="mt-4">

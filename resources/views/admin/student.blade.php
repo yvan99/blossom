@@ -55,7 +55,7 @@
                                     <td>{{$item->gender}}</td>
                                     <td>{{$item->student_province}}</td>
                                     <td>{{$item->student_district}}</td>
-                                    <td><a href="" class="btn btn-sm btn-default">View Quiz</a> </td>
+                                    <td><a href="quiz/{{$item->student_id}}" class="btn btn-sm btn-default">View Quiz</a> </td>
                                    </tr>
                                 @endforeach
 
@@ -72,5 +72,5 @@
     </div>
 
 
-    @include('components.dashboard.js');
+    @include('components.dashboard.js')
 

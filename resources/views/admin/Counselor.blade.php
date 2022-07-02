@@ -116,7 +116,7 @@
     </div>
 
 
-    @include('components.dashboard.js');
+    @include('components.dashboard.js')
 
     </body>
     </html>

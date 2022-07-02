@@ -1,6 +1,6 @@
 <section class="relative bg-white">
     <img class="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
-        src="assets/img/banner.jpg"
+        src="../assets/img/banner.jpg"
         alt="sisterhood" />
 
     <div class="hidden sm:block sm:inset-0 sm:absolute sm:bg-gradient-to-r sm:from-white sm:to-transparent"></div>
@@ -24,11 +24,17 @@
                     href="/signup">
                     Get Started
                 </a>
-
+                @if (!Auth::user())
                 <a class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-rose-600 sm:w-auto hover:text-rose-700 active:text-rose-500 focus:outline-none focus:ring"
-                    href="/quiz">
-                    Take Quiz
+                    href="/signin">
+                    Sign In
                 </a>
+                @else
+                <a class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-rose-600 sm:w-auto hover:text-rose-700 active:text-rose-500 focus:outline-none focus:ring"
+                href="quiz">
+               Take quiz
+            </a>
+                @endif
             </div>
         </div>
     </div>

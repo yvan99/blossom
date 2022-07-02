@@ -50,11 +50,6 @@ return [
             'driver' => 'session',
             'provider' => 'students',
         ],
-        
-         'counsellor' => [
-            'driver' => 'session',
-            'provider' => 'counsellors',
-        ],
     ],
 
     /*
@@ -89,10 +84,6 @@ return [
             'model' => App\Models\Student::class,
         ],
         
-        'counsellors' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Councelor::class,
-        ],
     ],
 
     /*

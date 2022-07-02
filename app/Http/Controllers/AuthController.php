@@ -17,7 +17,7 @@ class AuthController extends Controller
 
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
 
-            return redirect()->intended('/admin/home');
+            return redirect()->intended('/home');
         }
         return redirect()->back()->with('status', "Invalid credentials");
     }
@@ -30,29 +30,21 @@ class AuthController extends Controller
         ]);
 
         if (Auth::guard('student')->attempt(['student_username' => $request->username, 'password' => $request->password])) {
-
-            return redirect()->intended('/quiz');
+            return redirect()->intended('/student/quiz');
         }
         return redirect()->back()->with('status', "Invalid credentials");
     }
 
-    public function counselorLogin(Request $request)
-    {
-        $this->validate($request, [
-            'email'   => 'required|email',
-            'password' => 'required|min:6'
-        ]);
-
-        if (Auth::guard('counselor')->attempt(['email' => $request->email, 'password' => $request->password])) {
-
-            return redirect()->intended('/counselor/home');
-        }
-        return back()->withInput($request->only('email'));
-    }
 
     public function Adminlogout()
     {
         Auth::guard('admin')->logout();
-        return redirect('/');
+        return redirect('/admin');
+    }
+
+    public function studentlogout()
+    {
+        Auth::guard('student')->logout();
+        return redirect('/signin');
     }
 }
