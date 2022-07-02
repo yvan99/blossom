@@ -7,8 +7,3 @@
 - Import your database located in `public/db`
 - Start your application by typing in your terminal ` php artisan serve `
 - Enjoy
-
-# PROJECT CREDITS
-
-- Jolie ` PROJECT OWNER`
-- Ivan ` Dev `
