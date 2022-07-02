@@ -8,8 +8,10 @@
             @include('components.alert')
             <form action='{{ route('savestudent') }}' method="post">
                 @csrf
-                <input type="text" disabled class="block border border-grey-light w-full p-3 rounded mb-4" name="fullname"
+                <input type="text" disabled class="block border border-grey-light w-full p-3 rounded mb-4" 
                     value={{ $code }} placeholder="Let's stay anonymous" />
+
+                    <input type="hidden" name="fullname" value={{ $code }}>
                 <select name="gender"
                     class="border-grey-light p-3 rounded block w-full mb-4 border bg-white focus:ring-rose-600 focus:border-blue-500 block">
                     <option selected disabled>Choose your gender</option>

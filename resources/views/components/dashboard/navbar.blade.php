@@ -12,32 +12,39 @@
     
     <ul class="navbar-nav">
     <li class="nav-item">
-    <a class="nav-link" href="/admin/home">
-    <i class="ni ni-tv-2 text-primary"></i>
+    <a class="nav-link" href="/home">
+    <i class="ni ni-tv-2 text-white" style="font-size: 20px"></i>
     <span class="nav-link-text text-white">Dashboard</span>
     </a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="student">
-    <i class="ni ni-single-02 text-orange"></i>
+    <a class="nav-link" href="/student">
+    <i class="ni ni-single-02 text-white" style="font-size: 20px"></i>
     <span class="nav-link-text text-white">Student Report</span>
     </a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="counselor">
-        <i class="ni ni-single-02 text-orange"></i>
+    <a class="nav-link" href="/counselor">
+        <i class="ni ni-single-02 text-white" style="font-size: 20px"></i>
     <span class="nav-link-text text-white">Counselor Report</span>
     </a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="question">
-    <i class="ni ni-single-02 text-yellow"></i>
+    <a class="nav-link" href="/question">
+    <i class="ni ni-single-02 text-white" style="font-size: 20px"></i>
     <span class="nav-link-text text-white">Question Report</span>
     </a>
     </li>
+
     <li class="nav-item">
-    <a class="nav-link" href="logout">
-    <i class="ni ni-bullet-list-67 text-default"></i>
+        <a class="nav-link" target="_blank" href="https://www.tidio.com/">
+        <i class="ni ni-chat-round text-white" style="font-size: 20px"></i>
+        <span class="nav-link-text text-white">Chatbot Integration</span>
+        </a>
+        </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/admin/logout">
+    <i class="ni ni-button-power text-white" style="font-size: 20px"></i>
     <span class="nav-link-text text-white">Sign Out</span>
     </a>
     </li>
