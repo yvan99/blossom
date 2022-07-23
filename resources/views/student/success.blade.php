@@ -25,9 +25,5 @@
                 </defs>
             </svg>
         </div>
-        <p>We're happy you're here. Let's get your email address verified:</p>
-        <div class="mt-4">
-
-        </div>
     </div>
 </div>
