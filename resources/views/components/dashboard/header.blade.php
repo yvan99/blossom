@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="dropdown-divider"></div>
-                        <a href="logout" class="dropdown-item">
+                        <a href="/admin/logout" class="dropdown-item">
                             <i class="ni ni-user-run"></i>
                             <span>Logout</span>
                         </a>

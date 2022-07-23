@@ -8,9 +8,9 @@ use App\Models\Questions;
 use App\Models\Student;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 
 class StudentController extends Controller
@@ -61,7 +61,21 @@ public function populateData(){
     $getCouncelortotals= Councelor::all()->count();
     $getQuestionstotal = Questions::all()->count();
     $getAnswers=Answers::all()->count();
+
+    $getQuizesAttempts = (Answers::all()->count());
+    $getKigaliNot = count(DB::select("SELECT * FROM students,questions,answers,student_answers WHERE students.student_id=student_answers.student_id and student_answers.answ_id=answers.answ_id and student_answers.quest_id=questions.quest_id and student_answers.answ_id <> 2 and students.student_province='Kigali'"));
+    $getEastNot = count(DB::select("SELECT * FROM students,questions,answers,student_answers WHERE students.student_id=student_answers.student_id and student_answers.answ_id=answers.answ_id and student_answers.quest_id=questions.quest_id and student_answers.answ_id <> 2 and students.student_province='East'"));
+    $getWestNot = count(DB::select("SELECT * FROM students,questions,answers,student_answers WHERE students.student_id=student_answers.student_id and student_answers.answ_id=answers.answ_id and student_answers.quest_id=questions.quest_id and student_answers.answ_id <> 2 and students.student_province='West'"));
+    $getNorthNot = count(DB::select("SELECT * FROM students,questions,answers,student_answers WHERE students.student_id=student_answers.student_id and student_answers.answ_id=answers.answ_id and student_answers.quest_id=questions.quest_id and student_answers.answ_id <> 2 and students.student_province='North'"));
+    $getSouthNot = count(DB::select("SELECT * FROM students,questions,answers,student_answers WHERE students.student_id=student_answers.student_id and student_answers.answ_id=answers.answ_id and student_answers.quest_id=questions.quest_id and student_answers.answ_id <> 2 and students.student_province='South'"));
     
+    $totalKigaliNo  = $getKigaliNot * 100 / $getQuizesAttempts;
+    $totalEastNo  = $getEastNot * 100 / $getQuizesAttempts;
+    $totalWestNo  = $getWestNot * 100 / $getQuizesAttempts;
+    $totalNorthNo  = $getNorthNot * 100 / $getQuizesAttempts;
+    $totalSouthNo  = $getSouthNot * 100 / $getQuizesAttempts;
+
+
     
 
     return [
@@ -73,6 +87,11 @@ public function populateData(){
         'totalcounsel'=>$getCouncelortotals,
         'totalquestion'=>$getQuestionstotal,
         'totalquizes'=>$getAnswers,
+        'kigalinos'=>$totalKigaliNo,
+        'eastnos'=>$totalEastNo,
+        'westnos'=>$totalWestNo,
+        'northnos'=>$totalNorthNo,
+        'southnos'=>$totalSouthNo
         
     ];
 }
@@ -96,4 +115,16 @@ $getStudentId = $key->student_id;
 Session::put('studentSession', $getStudentId);
 return view('admin.studquizes',['questions'=>$getStudentAnswers,'student'=>$getStudent]);
 }
+
+
+public function getStudentAttempt(){
+    $studentId = Auth::user()->student_id;
+    $getStudentAnswers = DB::select("SELECT * FROM students,questions,answers,student_answers WHERE students.student_id=student_answers.student_id and student_answers.answ_id=answers.answ_id and student_answers.quest_id=questions.quest_id AND students.student_id='$studentId' ORDER BY student_answers.st_ans_id ASC ");
+    foreach ($getStudentAnswers as $key ) {
+    $getStudent = $key->student_username;
+    $getStudentId = $key->student_id;
+    }
+    Session::put('studentSession', $getStudentId);
+    return view('student.hisquiz',['questions'=>$getStudentAnswers,'student'=>$getStudent]);
+    }
 }
