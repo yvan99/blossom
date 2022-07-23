@@ -25,5 +25,12 @@
                 </defs>
             </svg>
         </div>
+        <p>We're happy you're here. Let's get your email address verified:</p>
+        <div class="mt-4">
+            <a class="block px-5 py-2.5 text-sm font-medium text-white bg-rose-600 hover:bg-gray-500 transition rounded-md shadow"
+            href="/student/my-quiz">
+            View Your Quiz Results
+        </a>
+        </div>
     </div>
 </div>

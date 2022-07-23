@@ -19,6 +19,12 @@
                                 Take a quiz
                             </a>
                         </li>
+
+                                                <li>
+                            <a class="text-white transition hover:text-white/75" href="/student/my-quiz">
+                               My Quiz Attempt
+                            </a>
+                        </li>
                     @endif
                     @if (!Auth::user())
                         <li>
