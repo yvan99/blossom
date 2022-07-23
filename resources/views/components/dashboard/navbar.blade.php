@@ -26,13 +26,13 @@
     <li class="nav-item">
     <a class="nav-link" href="/counselor">
         <i class="ni ni-single-02 text-white" style="font-size: 20px"></i>
-    <span class="nav-link-text text-white">Counselor Report</span>
+    <span class="nav-link-text text-white">View Counselor</span>
     </a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="/question">
     <i class="ni ni-single-02 text-white" style="font-size: 20px"></i>
-    <span class="nav-link-text text-white">Question Report</span>
+    <span class="nav-link-text text-white">Manipulate Question</span>
     </a>
     </li>
 
