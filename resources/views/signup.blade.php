@@ -46,7 +46,7 @@
 
         <div class="text-grey-dark mt-6">
             Already have an account?
-            <a class="no-underline border-b border-blue text-blue" href="../login/">
+            <a class="no-underline border-b border-blue text-blue" href="/signin">
                 Log in
             </a>.
         </div>
