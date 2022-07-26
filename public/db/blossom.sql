@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2022 at 03:36 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.4.27
+-- Generation Time: Jul 27, 2022 at 12:12 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -198,6 +198,26 @@ INSERT INTO `student_answers` (`st_ans_id`, `st_ans_date`, `answ_id`, `quest_id`
 (770, '2022-07-02 01:16:59', '3', '24', 3, '1'),
 (771, '2022-07-02 01:16:59', '2', '21', 3, '1');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student_quizdata`
+--
+
+CREATE TABLE `student_quizdata` (
+  `studq_id` int(12) NOT NULL,
+  `student_id` int(12) NOT NULL,
+  `studq_yes` int(5) NOT NULL,
+  `studq_no` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `student_quizdata`
+--
+
+INSERT INTO `student_quizdata` (`studq_id`, `student_id`, `studq_yes`, `studq_no`) VALUES
+(1, 3, 4, 6);
+
 --
 -- Indexes for dumped tables
 --
@@ -239,6 +259,12 @@ ALTER TABLE `student_answers`
   ADD PRIMARY KEY (`st_ans_id`);
 
 --
+-- Indexes for table `student_quizdata`
+--
+ALTER TABLE `student_quizdata`
+  ADD PRIMARY KEY (`studq_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -277,6 +303,12 @@ ALTER TABLE `students`
 --
 ALTER TABLE `student_answers`
   MODIFY `st_ans_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=772;
+
+--
+-- AUTO_INCREMENT for table `student_quizdata`
+--
+ALTER TABLE `student_quizdata`
+  MODIFY `studq_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
