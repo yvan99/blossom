@@ -23,7 +23,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h5 class="card-title text-uppercase text-muted mb-0">registered students
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Registered students
                                             </h5>
                                             <span class="h1 font-weight-bold mb-0">{{ $totalstudents }}</span>
                                         </div>
@@ -64,7 +64,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h5 class="card-title text-uppercase text-muted mb-0">Total counselor</h5>
+                                            <h5 class="card-title text-uppercase text-muted mb-0">Total counsellors</h5>
                                             <span class="h1 font-weight-bold mb-0">{{ $totalcounsel }}</span>
                                         </div>
                                         <div class="col-auto">
@@ -106,7 +106,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h5 class="card-title text-uppercase text-muted mb-0">TOTAL QUIZES DONE
+                                            <h5 class="card-title text-uppercase text-muted mb-0">TOTAL StUDENTS TO COUNSEL
                                             </h5>
                                             <span class="h1 font-weight-bold mb-0">{{ $takecareof}}</span>
                                         </div>
@@ -133,10 +133,11 @@
                 <div class="card bg-white">
 
                     <div class="card-body">
-                        <h2>Provinces Quizes Data Percentage analytics</h2>
+                        <h2>Quizes Data Percentage per Provinces</h2>
                        
-                        <li>Blue colored chart bar represent the yes percentage</li>
-                        <li>Green colored chart bar represent the all other combined percentage</li>
+                        <li>Blue colored chart bar represent the yes percentages</li>
+                        <li>Green colored chart bar represent the all other combined percentages</li>
+                        <li>The x-axis represents Provinces & The y-axis represents percentages</li>
                         <div id="chart" style="height: 400px;"></div>
 
                     </div>
@@ -154,7 +155,7 @@
                 <div class="card bg-white">
 
                     <div class="card-body">
-                        <h2>Sexual .. Predicted ...</h2>
+                        <h2>Teen Pregnancy Prediction</h2>
 
                         <div class="row">
 

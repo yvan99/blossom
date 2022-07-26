@@ -2,7 +2,7 @@
 @include('components.header')
 <div class="flex items-center justify-center">
     <div class="max-w-xl p-8 text-center text-gray-800 bg-white lg:max-w-3xl rounded-3xl lg:p-12">
-        <h2 class="text-4xl font-extrabold">Thank you for participating in the quiz</h2>
+        <h2 class="text-4xl font-extrabold">Thank you for Attending the quiz</h2>
         <div class="flex justify-center">
             <svg class="w-52 h-52 animate-pulse" viewBox="0 0 50 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -25,7 +25,6 @@
                 </defs>
             </svg>
         </div>
-        <p>We're happy you're here. Let's get your email address verified:</p>
         <div class="mt-4">
             <a class="px-5 py-2.5 text-sm font-medium text-white bg-rose-600 hover:bg-gray-500 transition rounded-md shadow"
                 href="/student/my-quiz">

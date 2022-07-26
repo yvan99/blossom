@@ -1,5 +1,5 @@
 # BLOSSOM PROJECT
-## BLOSSOM is a web application to help understand the reason behind teenage pregnancies, and analyze the data and suggest call to action strategies to decrease the rates.
+## BLOSSOM is a web application to help understand the reason behind teenage pregnancies, analyze the data and predict the risk of Teen Pregnancy.
 
 # HOW TO INSTALL 
 - Clone the repository

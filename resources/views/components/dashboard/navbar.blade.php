@@ -20,19 +20,19 @@
     <li class="nav-item">
     <a class="nav-link" href="/student">
     <i class="ni ni-single-02 text-white" style="font-size: 20px"></i>
-    <span class="nav-link-text text-white">Student Report</span>
+    <span class="nav-link-text text-white">Students Report</span>
     </a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="/counselor">
         <i class="ni ni-single-02 text-white" style="font-size: 20px"></i>
-    <span class="nav-link-text text-white">View Counselor</span>
+    <span class="nav-link-text text-white">View Counsellor</span>
     </a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="/question">
     <i class="ni ni-single-02 text-white" style="font-size: 20px"></i>
-    <span class="nav-link-text text-white">Manipulate Question</span>
+    <span class="nav-link-text text-white">Manipulate Questions</span>
     </a>
     </li>
 

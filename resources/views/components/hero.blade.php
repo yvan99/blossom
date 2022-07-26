@@ -15,8 +15,7 @@
             </h1>
 
             <p class="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
-                BLOSSOM is a web application to help understand the reason behind teenage pregnancies,
-                and analyze the data and suggest call to action strategies to decrease the rates.
+                BLOSSOM is a web application to help understand the reason behind teenage pregnancies, analyze the data and predict the risk of Teen Pregnancy.
             </p>
 
             <div class="flex flex-wrap gap-4 mt-8 text-center">

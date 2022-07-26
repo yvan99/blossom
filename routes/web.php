@@ -26,9 +26,8 @@ Route::group(['middleware' => 'auth:student','prefix'=>'student'],function (){
   Route::post('/quiz',[QuestionsController::class,'attemptQuiz'])->name('quiztake');
   Route::get('/logout',[AuthController::class,'studentLogout']);
   Route::get('/success',[StudentController::class,'saveStudentAnswers'])->name('successsurvey');
-  Route::view('/success','student.success')->name('successsurvey');
   Route::view('/learnmore','student.learnmore');
-
+});
 
 Route::group(['middleware' => 'auth:admin'],function (){
 Route::view('/home','admin.index')->name('homeadmin');
