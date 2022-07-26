@@ -69,15 +69,21 @@ public function populateData(){
     $getNorthNot = count(DB::select("SELECT * FROM students,questions,answers,student_answers WHERE students.student_id=student_answers.student_id and student_answers.answ_id=answers.answ_id and student_answers.quest_id=questions.quest_id and student_answers.answ_id <> 2 and students.student_province='North'"));
     $getSouthNot = count(DB::select("SELECT * FROM students,questions,answers,student_answers WHERE students.student_id=student_answers.student_id and student_answers.answ_id=answers.answ_id and student_answers.quest_id=questions.quest_id and student_answers.answ_id <> 2 and students.student_province='South'"));
     
+    //$selector = DB::select("SELECT sum(student_answers.answ_id <>2)");
+    $getStudentsNos = count(DB::select("SELECT distinct students.student_id,student_answers.student_id FROM students,student_answers WHERE students.student_id=student_answers.student_id and (student_answers.answ_id <>2) "));
+
+    // distinct students.student_id,student_answers.student_id
+    // foreach ($getStudentsWhoAttemptedQuiz as $key ) {
+    //     $studentIde = $key->student_id;
+    // }
+    // $StudentsWhoNeedsAttention= count(DB::select("SELECT *  FROM  students,questions,answers,student_answers WHERE students.student_id=student_answers.student_id and student_answers.answ_id=answers.answ_id and student_answers.quest_id=questions.quest_id and student_answers.answ_id <> 2 and students.student_id='$studentIde'"));
+    
     $totalKigaliNo  = $getKigaliNot * 100 / $getQuizesAttempts;
     $totalEastNo  = $getEastNot * 100 / $getQuizesAttempts;
     $totalWestNo  = $getWestNot * 100 / $getQuizesAttempts;
     $totalNorthNo  = $getNorthNot * 100 / $getQuizesAttempts;
     $totalSouthNo  = $getSouthNot * 100 / $getQuizesAttempts;
-
-
     
-
     return [
 
         'questions'=>$getQuestions,
@@ -91,7 +97,8 @@ public function populateData(){
         'eastnos'=>$totalEastNo,
         'westnos'=>$totalWestNo,
         'northnos'=>$totalNorthNo,
-        'southnos'=>$totalSouthNo
+        'southnos'=>$totalSouthNo,
+        'takecareof'=>$getStudentsNos
         
     ];
 }
@@ -99,10 +106,6 @@ public function populateData(){
 public function chartDatas(Request $request){
     $getStudentIdThroughUrlParams = $request->segment(3);
     return $getStudentIdThroughUrlParams;
-
-}
-
-public function xxx(){
 
 }
 
@@ -124,7 +127,13 @@ public function getStudentAttempt(){
     $getStudent = $key->student_username;
     $getStudentId = $key->student_id;
     }
+    // display student quiz attempt information
+    $getStudentId = Auth::user()->student_id;
+    $getStudentNot= count(DB::select("SELECT * FROM students,questions,answers,student_answers WHERE students.student_id=student_answers.student_id and student_answers.answ_id=answers.answ_id and student_answers.quest_id=questions.quest_id and student_answers.answ_id <> 2 and students.student_id='$getStudentId'"));
+    $getStudentYes = count(DB::select("SELECT * FROM students,questions,answers,student_answers WHERE students.student_id=student_answers.student_id and student_answers.answ_id=answers.answ_id and student_answers.quest_id=questions.quest_id and student_answers.answ_id = '2' and students.student_id='$getStudentId'"));   
+    
+    
     Session::put('studentSession', $getStudentId);
-    return view('student.hisquiz',['questions'=>$getStudentAnswers,'student'=>$getStudent]);
+    return view('student.hisquiz',['questions'=>$getStudentAnswers,'student'=>$getStudent,'studentyes'=>$getStudentYes,'studentno'=>$getStudentNot]);
     }
 }
