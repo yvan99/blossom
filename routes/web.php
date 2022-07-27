@@ -39,6 +39,7 @@ Route::view('/question','admin.question');
 Route::view('/quiz/{id}','admin.studquizes');
 Route::get('/quiz/{id}',[StudentController::class,'getStudentQuiz']);
 Route::get('/admin/logout',[AuthController::class,'Adminlogout']);
+Route::view('/proposed','admin.proposed');
 });
 
 
