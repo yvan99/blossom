@@ -26,6 +26,9 @@
                         <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal">
                             Add Question
                         </button>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal">
+                            Update Question
+                        </button>
 
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
@@ -33,7 +36,7 @@
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Ask a Question</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Add a Question</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -50,6 +53,7 @@
                                         <button type="button" class="btn btn-danger"
                                             data-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-default">Save Question</button>
+                                        <button type="submit" class="btn btn-default">Update Question</button>
                                         </form>
                                     </div>
                                 </div>

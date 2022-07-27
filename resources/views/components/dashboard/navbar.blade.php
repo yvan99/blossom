@@ -35,6 +35,12 @@
     <span class="nav-link-text text-white">Manipulate Questions</span>
     </a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/response">
+        <i class="ni ni-single-02 text-white" style="font-size: 20px"></i>
+        <span class="nav-link-text text-white">Proposed Solution</span>
+        </a>
+        </li>
 
     <li class="nav-item">
         <a class="nav-link" target="_blank" href="https://www.tidio.com/">
