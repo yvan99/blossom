@@ -40,6 +40,12 @@ class QuestionsController extends Controller
             }
         }
     }
+    public function edit_function($item)
+    {
+        $questions = DB::select("select * from questions where quest_id = ?',[$item]");
+        return view('questionedit',['questions'=>$item]);
+
+    }
 
     public function attemptQuiz(Request $request)
     {

@@ -222,9 +222,9 @@
     <div class="card bg-white">
         <div class="card-body">
             <h2 class="text-center">Proposed Solution</h2>
-            <h3> In case of high risk, Please apply the following measures: </h3>
-                <p class="text-gray-900;font-weight:600"> * Introduce a Curriculum for Sexual and Reproductive Health.</b>
-                <p class="text-gray-900;font-weight:600"> * Encourage Counselling for Students in Need.</b>
+            <h3> In case of high risk, below measures are to be followed: </h3>
+                <p class="text-gray-900;font-weight:600"> * Introduction of a new Curriculum for Sexual and Reproductive Health.</b>
+                <p class="text-gray-900;font-weight:600"> * Encouraging Counselling for Students in Need.</b>
                 <p class="text-gray-900;font-weight:600"> * Create safe spaces for students to express themselves.</b>
 
 </div>

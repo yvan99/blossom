@@ -15,9 +15,9 @@
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                 <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
                                 <li class="breadcrumb-item"><a href="home">Admin</a></li>
-                                <li class="breadcrumb-item"><a href="student">Student</a></li>
-                                <li class="breadcrumb-item"><a href="counselor">Counselor</a></li>
-                                <li class="breadcrumb-item"><a href="question">Question</a></li>
+                                <!--li class="breadcrumb-item"><a href="student">Student</a></li-->
+                                <!--li class="breadcrumb-item"><a href="counselor">Counselor</a></li-->
+                                <li class="breadcrumb-item"><a href="question">Questions</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -26,10 +26,6 @@
                         <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal">
                             Add Question
                         </button>
-                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal">
-                            Update Question
-                        </button>
-
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -49,11 +45,11 @@
                                             </div>
 
                                     </div>
+
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger"
                                             data-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-default">Save Question</button>
-                                        <button type="submit" class="btn btn-default">Update Question</button>
                                         </form>
                                     </div>
                                 </div>
@@ -89,6 +85,7 @@
                               <tr>
                                   <td>{{$loop->iteration}}</td>
                                   <td>{{$item->quest_question}}</td>
+                                  <td> <a href="click_edit/{{ $item->id }}" class="btn btn-success">Edit</a> </td>
                                  </tr>
                               @endforeach
 

@@ -106,7 +106,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h5 class="card-title text-uppercase text-muted mb-0">TOTAL StUDENTS TO COUNSEL
+                                            <h5 class="card-title text-uppercase text-muted mb-0">TOTAL STUDENTS TO COUNSEL
                                             </h5>
                                             <span class="h1 font-weight-bold mb-0">{{ $takecareof}}</span>
                                         </div>
