@@ -40,7 +40,7 @@ Route::view('/quiz/{id}','admin.studquizes');
 Route::get('/quiz/{id}',[StudentController::class,'getStudentQuiz']);
 Route::get('/admin/logout',[AuthController::class,'Adminlogout']);
 Route::view('/proposed','admin.proposed');
-Route::get('/click_edit{id}',[QuestionsController::class,'edit_function']);
+Route::get('/click_edit{quest_question}',[QuestionsController::class,'edit_function']);
 Route::post('/update/{id}',[QuestionsController::class,'edit_function'])->name('update');
 });
 
