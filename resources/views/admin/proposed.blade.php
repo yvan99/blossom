@@ -6,72 +6,8 @@
         @include('components.dashboard.header')
         <div class="container-fluid mt--6">
             <div class="row">
-                <div class="col-xl-3 col-md-6">
-                    <div class="card card-stats">
-
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">Registered students
-                                    </h5>
-                                    <span class="h1 font-weight-bold mb-0">{{ $totalstudents }}</span>
-                                </div>
-                                <div class="col-auto">
-                                    <div
-                                        class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                                        <i class="ni ni-active-40"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="card card-stats">
-
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">TOTAL QUIZES DONE
-                                    </h5>
-                                    <span class="h1 font-weight-bold mb-0">{{ $totalquizes / 10 }}</span>
-                                </div>
-                                <div class="col-auto">
-                                    <div
-                                        class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
-                                        <i class="ni ni-chart-bar-32"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="card card-stats">
-
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <h5 class="card-title text-uppercase text-muted mb-0">TOTAL STUDENTS TO COUNSEL
-                                    </h5>
-                                    <span class="h1 font-weight-bold mb-0">{{ $takecareof}}</span>
-                                </div>
-                                <div class="col-auto">
-                                    <div
-                                        class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
-                                        <i class="ni ni-chart-bar-32"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
                 <div class="col-xl-12">
                     <div class="card bg-white">
-    
                         <div class="card-body">
                             <h2>Teen Pregnancy Prediction</h2>
     

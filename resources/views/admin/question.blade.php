@@ -78,6 +78,7 @@
                               <tr>
                                   <th>#</th>
                                   <th scope="col" class="sort" >Question</th>
+                                  <th>action</th>
                               </tr>
                           </thead>
                           <tbody class="list">
@@ -85,7 +86,7 @@
                               <tr>
                                   <td>{{$loop->iteration}}</td>
                                   <td>{{$item->quest_question}}</td>
-                                  <td> <a href="click_edit/{{ $item->id }}" class="btn btn-success">Edit</a> </td>
+                                  <td> <a href="editquestion/{{ $item->quest_id }}" class="btn btn-warning">Edit</a> </td>
                                  </tr>
                               @endforeach
 

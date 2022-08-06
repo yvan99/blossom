@@ -40,12 +40,29 @@ class QuestionsController extends Controller
             }
         }
     }
-    public function edit_function($item)
+    public function getEditedQuestion($id)
     {
-        $questions = DB::select("select * from questions where quest_id = ?',[$item]");
-        return view('questionedit',['questions'=>$item]);
-
+        $getQuestion = Questions::where('quest_id', $id)->first();
+        return view('admin.questionedit', ['question' => $getQuestion]);
     }
+    public function UpdateQuestion(Request $request)
+    {
+        $question = $request->get('question');
+        $questId = $request->get('id');
+        $updateQuestion = DB::update("UPDATE questions SET quest_question='$question' WHERE quest_id='$questId'");
+        if ($updateQuestion) {
+            return redirect('/question')->with('status', 'Question Updated Successfully');
+        }
+    }
+    // public function EditQuestion(Request $request,$question)
+    // {
+    //     $findQuestion = Questions::find($question);
+    //     $findQuestion->quest_question=$request->get('');
+
+    //     $questions = DB::select("select * from questions where quest_id = ?',[$item]");
+    //     return view('questionedit',['questions'=>$item]);
+
+    // }
 
     public function attemptQuiz(Request $request)
     {
